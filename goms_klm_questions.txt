@@ -1,0 +1,5 @@
+a) "Critical path" is a term associated with a variant of the original GOMS-model, CPM-GOMS. 
+CPM does not only stand for "Critical-Path-Method", a project development method, but also "Cognitive Perceptual Motor", referring to the different types of operators used in this GOMS-model.
+Contrary to the original GOMS-model, CPM-GOMS can model multitasking, making it more precise, but also more costly in regards to the work one has to put in.
+The critical path is the sequence of activities in a GOMS-process which takes the most time to complete. 
+Therefore the critical path describes the total time needed to complete a given task.
