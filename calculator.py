@@ -49,7 +49,7 @@ class CalculatorWindow(QtWidgets.QWidget):
     def click_log():
         def dec(func):
             def inner_func(self):
-                self.log_csv(["Button", str(self.sender().objectName()), self.timestamp()])
+                self.log_csv(["Button clicked", str(self.sender().objectName()), self.timestamp()])
                 func(self)
             return inner_func
         return dec
@@ -58,7 +58,7 @@ class CalculatorWindow(QtWidgets.QWidget):
     def key_log():
         def dec(func):
             def inner_func(self, event):
-                self.log_csv(["Key", str(event.key()), self.timestamp()])
+                self.log_csv(["Key pressed", str(event.key()), self.timestamp()])
                 func(self, event)
             return inner_func
         return dec
