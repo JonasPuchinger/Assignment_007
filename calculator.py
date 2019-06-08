@@ -22,6 +22,7 @@ class CalculatorWindow(QtWidgets.QWidget):
             self.button_4, self.button_5, self.button_6,
             self.button_7, self.button_8, self.button_9,
             self.button_plus, self.button_minus, self.button_multiply, self.button_divide,
+            self.button_parenthesis_open, self.button_parenthesis_close, self.button_dot,
             self.button_equals, self.button_clear, self.button_delete
         ]
 
@@ -32,6 +33,7 @@ class CalculatorWindow(QtWidgets.QWidget):
             "4": 52, "5": 53, "6": 54,
             "7": 55, "8": 56, "9": 57,
             "plus": 43, "minus": 45, "multiply": 42, "divide": 47,
+            "parenthesis_open": 40, "parenthesis_close": 41, "dot": 46,
             "equals": 61, "clear": 16777223, "delete": 16777219
         }
 
@@ -99,7 +101,7 @@ class CalculatorWindow(QtWidgets.QWidget):
     @click_log()
     def button_click(self):
         sender = self.sender()
-        input_operators = self.buttons[:14]
+        input_operators = self.buttons[:17]
 
         # if pushed button is a input operator, append the corresponding text to the input field
         if(sender in input_operators):
@@ -123,7 +125,7 @@ class CalculatorWindow(QtWidgets.QWidget):
     @key_log()
     def keyPressEvent(self, event):
         key = event.key()
-        input_operators = list(self.keys.values())[:14]
+        input_operators = list(self.keys.values())[:17]
 
         # if pushed key is a input operator, append the corresponding text to the input field
         if(key in input_operators):

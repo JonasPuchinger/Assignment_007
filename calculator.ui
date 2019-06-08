@@ -136,6 +136,27 @@
      </property>
     </widget>
    </item>
+   <item row="4" column="0">
+    <widget class="QPushButton" name="button_parenthesis_open">
+     <property name="text">
+      <string>(</string>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="2">
+    <widget class="QPushButton" name="button_parenthesis_close">
+     <property name="text">
+      <string>)</string>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="3">
+    <widget class="QPushButton" name="button_dot">
+     <property name="text">
+      <string>.</string>
+     </property>
+    </widget>
+   </item>
   </layout>
  </widget>
  <resources/>

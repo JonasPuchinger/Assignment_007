@@ -1,4 +1,6 @@
 
 \.idea/
 
-\.ipynb_checkpoints/calculator_klm-checkpoint\.ipynb
+\.ipynb_checkpoints/
+
+\__pycache__/
