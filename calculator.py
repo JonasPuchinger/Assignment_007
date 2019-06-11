@@ -78,7 +78,7 @@ class CalculatorWindow(QtWidgets.QWidget):
         def dec(func):
             def inner_func(self):
                 if(self.is_last_operation_calc):
-                    print("Last operation was calculation; clearing input")
+                    # print("Last operation was calculation; clearing input")
                     self.input.clear()
                     self.is_last_operation_calc = False
                 return func(self)
@@ -89,7 +89,7 @@ class CalculatorWindow(QtWidgets.QWidget):
         def dec(func):
             def inner_func(self, *args):
                 if(self.is_last_operation_calc):
-                    print("Last operation was calculation; clearing input")
+                    # print("Last operation was calculation; clearing input")
                     self.input.clear()
                     self.is_last_operation_calc = False
                 return func(self, *args)
