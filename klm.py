@@ -30,7 +30,6 @@ class KLM:
             self.calculate_predictions()
 
     def read_file(self, filename):
-        #print('Reading ' + str(filename))
         try:
             file = open(filename)
             readline = file.readlines()
@@ -39,10 +38,8 @@ class KLM:
             read_number = False
             # Read every line
             for line in readline:
-                #print(line)
                 # Read every char in current line
                 for char in line:
-                    #print(char)
                     # Check if current char is a number
                     if char.lower().isdigit():
                         # If the iteration before char was a number combine char to one number
@@ -53,7 +50,6 @@ class KLM:
                             number = char
                             multiplier = int(char)
                         read_number = True
-                        #print('multiplier: ' + str(multiplier) + ' Number: ' + number)
                     elif char.lower() == 'k':
                         self.amount_k += multiplier
                         multiplier = 1
@@ -85,7 +81,11 @@ class KLM:
 
     # Calculate predictions
     def calculate_predictions(self):
-        print('K: {0} P: {1} B: {2} M: {3} H: {4}'.format(self.amount_k, self.amount_p, self.amount_b, self.amount_m, self.amount_h))
+        print('K: {0} P: {1} B: {2} M: {3} H: {4}'.format(self.amount_k,
+                                                          self.amount_p,
+                                                          self.amount_b,
+                                                          self.amount_m,
+                                                          self.amount_h))
         original_prediction = self.amount_k * KLM_K + \
             self.amount_p * KLM_P + \
             self.amount_b * KLM_B + \
